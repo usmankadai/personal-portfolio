@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react"; // useRef kept for TypeWriter
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowDown, Sparkles, Code2 } from "lucide-react";
 import { GithubIcon, LinkedinIcon, TwitterIcon } from "@/components/SocialIcons";
@@ -41,6 +42,7 @@ const socialLinks = [
   { icon: LinkedinIcon, href: personalInfo.linkedin, label: "LinkedIn" },
   { icon: TwitterIcon, href: personalInfo.twitter, label: "Twitter" },
 ];
+
 
 export default function Hero() {
   return (
@@ -169,16 +171,21 @@ export default function Hero() {
             {/* Avatar */}
             <div className="relative">
               <div className="w-52 h-52 sm:w-64 sm:h-64 rounded-3xl bg-linear-to-br from-indigo-500 via-purple-600 to-pink-500 p-1 pulse-glow">
-                <div className="w-full h-full rounded-[22px] bg-[#0a0a0a] flex items-center justify-center">
-                  <span className="text-7xl sm:text-8xl font-black bg-linear-to-br from-indigo-400 to-purple-500 bg-clip-text text-transparent">
-                    UK
-                  </span>
+                <div className="w-full h-full rounded-[22px] overflow-hidden relative">
+                  <Image
+                    src="/avatar.png"
+                    alt="Usman Kadai"
+                    fill
+                    className="object-cover object-top"
+                    priority
+                    unoptimized
+                  />
                 </div>
               </div>
               {/* Floating badge */}
               <div className="absolute -bottom-4 -right-4 bg-[#1f2937] border border-white/10 rounded-2xl px-4 py-2 flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span className="text-xs text-gray-300 font-medium">Open to work</span>
+                <span className="text-xs text-gray-300 font-medium">Open to relocation</span>
               </div>
             </div>
 

@@ -7,13 +7,17 @@ export const personalInfo = {
     "Crafting scalable systems",
     "Open source enthusiast",
   ],
-  bio: "Passionate full stack developer with a love for clean code, elegant UIs, and solving hard problems. I build products that people actually enjoy using.",
+  bio: "Passionate full stack developer with a love for clean code, elegant UIs, and solving hard problems. I build products that people actually enjoy using. Based in London, open to relocation for the right opportunity.",
   location: "London, UK",
   email: "usmankadai@gmail.com",
   github: "https://github.com/usmankadai",
   linkedin: "https://linkedin.com/in/usman-muhammad-kadai",
   twitter: "https://twitter.com/usmankadai",
   resumeUrl: "#",
+  resumeUrls: {
+    fullstack: "/resume-fullstack.pdf",
+    frontend: "/resume-frontend.pdf",
+  },
   avatarGradient: "from-indigo-500 via-purple-500 to-pink-500",
 };
 
@@ -38,9 +42,31 @@ export const skills = [
   { name: "AWS", icon: "☁️", category: "Cloud" },
   { name: "Prisma", icon: "◆", category: "ORM" },
   { name: "Redis", icon: "🔴", category: "Cache" },
+  // Row 3 — CMS, styling & testing (from real client work)
+  { name: "PHP", icon: "💠", category: "Language" },
+  { name: "WordPress", icon: "🌐", category: "CMS" },
+  { name: "Storybook", icon: "📖", category: "Frontend" },
+  { name: "Nuxt.js", icon: "🔺", category: "Frontend" },
+  { name: "Sass/SCSS", icon: "💅", category: "Styling" },
+  { name: "GSAP", icon: "🎬", category: "Animation" },
+  { name: "Optimizely", icon: "⚙️", category: "CMS" },
+  { name: "Playwright", icon: "🎭", category: "Testing" },
+  { name: "Vite", icon: "🔥", category: "Build Tool" },
+  { name: "Twig", icon: "🌿", category: "Templating" },
+  { name: "WooCommerce", icon: "🛒", category: "E-commerce" },
+  { name: "Mapbox", icon: "🗺️", category: "Maps" },
+  { name: "Leaflet", icon: "🍃", category: "Maps" },
+  { name: "Lottie", icon: "✨", category: "Animation" },
+  { name: "Swiper", icon: "👆", category: "UI" },
+  { name: "Barba.js", icon: "🔀", category: "UI" },
+  { name: "WPML", icon: "🌍", category: "i18n" },
+  { name: "Chart.js", icon: "📊", category: "Data Viz" },
+  { name: "Apollo Client", icon: "🚀", category: "API" },
+  { name: "jQuery", icon: "💲", category: "Frontend" },
 ];
 
 export const projects = [
+  // — Personal projects —
   {
     title: "Scrabble",
     description:
@@ -51,6 +77,7 @@ export const projects = [
     image: "/projects/scrabble.gif",
     gradient: "from-indigo-600 via-purple-600 to-pink-600",
     featured: true,
+    type: "personal",
   },
   {
     title: "E-commerce Platform",
@@ -61,6 +88,7 @@ export const projects = [
     live: "#",
     gradient: "from-cyan-500 via-blue-600 to-indigo-700",
     featured: true,
+    type: "personal",
   },
   {
     title: "Deep Neural Network for Automatic Detection of Humans and Livestock In Aerial Images",
@@ -72,6 +100,7 @@ export const projects = [
     image: "/projects/aerial.gif",
     gradient: "from-emerald-500 via-teal-600 to-cyan-700",
     featured: true,
+    type: "personal",
   },
   {
     title: "DevOps Pipeline Tool",
@@ -82,6 +111,7 @@ export const projects = [
     live: "#",
     gradient: "from-orange-500 via-red-600 to-pink-700",
     featured: false,
+    type: "personal",
   },
   {
     title: "UK House Prices: Find Your Area",
@@ -93,6 +123,7 @@ export const projects = [
     image: "/projects/uk-house-price.gif",
     gradient: "from-violet-600 via-purple-700 to-indigo-800",
     featured: false,
+    type: "personal",
   },
   {
     title: "Movie DB",
@@ -104,6 +135,425 @@ export const projects = [
     image: "/projects/movie.gif",
     gradient: "from-rose-500 via-pink-600 to-purple-700",
     featured: false,
+    type: "personal",
+  },
+
+  // — Client work: Vue / Nuxt —
+  {
+    title: "INEOS Brand Website",
+    description:
+      "Authentication-gated brand hub for INEOS built with Nuxt 3 and Vue 3. Okta SSO, server-side rendering, Redis caching, Prom-client metrics, reCAPTCHA, Hotjar analytics, and a Flickity-powered media experience.",
+    tags: ["Nuxt.js", "Vue.js", "TypeScript", "Okta", "SSR", "Redis", "reCAPTCHA", "Hotjar"],
+    github: "#",
+    live: "#",
+    gradient: "from-green-600 via-teal-700 to-cyan-800",
+    featured: true,
+    type: "client",
+    category: "Vue / Nuxt",
+  },
+  {
+    title: "Nautilus DSRB",
+    description:
+      "Internal web app for Nautilus International built with Nuxt 2 and Vue. Apollo Client for GraphQL, Vuex state management, Lottie animations, Cookiebot GDPR consent, and Tailwind CSS — containerised with Docker.",
+    tags: ["Nuxt.js", "Vue.js", "GraphQL", "Apollo Client", "Vuex", "Lottie", "Tailwind CSS", "Cookiebot", "Docker"],
+    github: "#",
+    live: "#",
+    gradient: "from-blue-500 via-sky-600 to-teal-700",
+    featured: false,
+    type: "client",
+    category: "Vue / Nuxt",
+  },
+
+  // — Client work: Design Systems (frontend, handover to .NET backend) —
+  {
+    title: "INEOS Grenadiers Design System",
+    description:
+      "Component library and design system for the INEOS Grenadiers cycling team. Fully documented HTML/TypeScript components in Storybook with Tailwind CSS, handed over to the .NET backend team for CMS integration.",
+    tags: ["Storybook", "TypeScript", "Tailwind CSS", "Vite"],
+    github: "#",
+    live: "#",
+    gradient: "from-zinc-600 via-slate-700 to-gray-800",
+    featured: true,
+    type: "client",
+    category: "Design System",
+  },
+  {
+    title: "NHBC Design System v2",
+    description:
+      "Comprehensive Storybook component library for the National House Building Council. TypeScript components with Tailwind CSS, Chromatic visual regression testing, and built-in accessibility auditing.",
+    tags: ["Storybook", "TypeScript", "Tailwind CSS", "Vite", "Chromatic"],
+    github: "#",
+    live: "#",
+    gradient: "from-blue-600 via-indigo-700 to-violet-800",
+    featured: true,
+    type: "client",
+    category: "Design System",
+  },
+  {
+    title: "OSRL Design System",
+    description:
+      "Storybook component library for the Oil Spill Response organisation. TypeScript HTML components with Tailwind CSS, integrated into an Optimizely CMS site by the .NET backend team.",
+    tags: ["Storybook", "TypeScript", "Tailwind CSS", "Vite", "Optimizely"],
+    github: "#",
+    live: "#",
+    gradient: "from-emerald-600 via-teal-700 to-cyan-800",
+    featured: false,
+    type: "client",
+    category: "Design System",
+  },
+  {
+    title: "INEOS Capital Design System",
+    description:
+      "Enterprise design system powering the INEOS Capital Optimizely website. UIEngine pattern library with EJS templates, GSAP + ScrollMagic animations, Mapbox map components, Leaflet, and Headroom.js — shipped to the backend team for CMS integration.",
+    tags: ["UIEngine", "EJS", "GSAP", "ScrollMagic", "Mapbox", "Leaflet", "Sass/SCSS", "Nucleum"],
+    github: "#",
+    live: "#",
+    gradient: "from-cyan-500 via-sky-600 to-blue-700",
+    featured: false,
+    type: "client",
+    category: "Design System",
+  },
+  {
+    title: "Equity Design System",
+    description:
+      "Pattern library for the Equity performing arts union website. UIEngine and EJS templating with a shared SCSS token system, consumed by the .NET MVC site.",
+    tags: ["UIEngine", "EJS", "Sass/SCSS", "Nucleum"],
+    github: "#",
+    live: "#",
+    gradient: "from-violet-500 via-purple-600 to-fuchsia-700",
+    featured: false,
+    type: "client",
+    category: "Design System",
+  },
+  {
+    title: "NHBC Shop Style Guide",
+    description:
+      "Component pattern library for the NHBC e-commerce shop. UIEngine and EJS components with SCSS design tokens and Nucleum build tooling.",
+    tags: ["UIEngine", "EJS", "Sass/SCSS", "Nucleum"],
+    github: "#",
+    live: "#",
+    gradient: "from-rose-500 via-pink-600 to-fuchsia-700",
+    featured: false,
+    type: "client",
+    category: "Design System",
+  },
+
+  // — Client work: Frontend (.NET / Optimizely / Episerver, handover to backend) —
+  {
+    title: "INEOS Capital Website",
+    description:
+      "Corporate website for INEOS Capital on Optimizely CMS. Delivered Razor views, SCSS, Mapbox/Leaflet map integration, Barba.js page transitions, Stripe payments, and Bootstrap layout — handing off to the .NET backend team.",
+    tags: ["Optimizely", "Sass/SCSS", "JavaScript", "Razor", "Mapbox", "Leaflet", "Barba.js", "Stripe", "Bootstrap"],
+    github: "#",
+    live: "#",
+    gradient: "from-indigo-600 via-violet-700 to-purple-800",
+    featured: false,
+    type: "client",
+    category: "Frontend (.NET)",
+  },
+  {
+    title: "INEOS Köln Website",
+    description:
+      "Episerver CMS site for the INEOS Köln cycling team. Frontend templates with GSAP + ScrollMagic animations, Barba.js page transitions, Mapbox maps, Bootstrap layout, and jQuery — integrated with the INEOS Capital Design System.",
+    tags: ["Episerver", "Sass/SCSS", "GSAP", "ScrollMagic", "Barba.js", "Mapbox", "Bootstrap", "jQuery"],
+    github: "#",
+    live: "#",
+    gradient: "from-gray-600 via-slate-700 to-zinc-800",
+    featured: false,
+    type: "client",
+    category: "Frontend (.NET)",
+  },
+  {
+    title: "Nautilus Episerver Website",
+    description:
+      "Corporate website for Nautilus International on EPiServer CMS. Frontend templates with Barba.js page transitions, Mapbox maps, Stripe payments, Sentry error monitoring, and Bootstrap layout.",
+    tags: ["Episerver", "Sass/SCSS", "Fosterkit", "Barba.js", "Mapbox", "Stripe", "Sentry", "Bootstrap"],
+    github: "#",
+    live: "#",
+    gradient: "from-teal-600 via-green-700 to-emerald-800",
+    featured: false,
+    type: "client",
+    category: "Frontend (.NET)",
+  },
+  {
+    title: "NHBC Awards & Events",
+    description:
+      "Awards and events platform for the National House Building Council. Delivered Storybook component library, Vue SSR microservice, and Barba.js page transitions; .NET Core MVC backend handled by the backend team.",
+    tags: ["Storybook", "Vue.js", "TypeScript", "Tailwind CSS", "Barba.js"],
+    github: "#",
+    live: "#",
+    gradient: "from-amber-500 via-orange-600 to-red-700",
+    featured: false,
+    type: "client",
+    category: "Design System",
+  },
+  {
+    title: "NHBC Website v2",
+    description:
+      "Full redevelopment of the National House Building Council's main corporate website on .NET Core MVC. Frontend with GSAP animations, Bootstrap layout, Adyen payment integration, Flickity carousels, and Playwright test suite.",
+    tags: ["Sass/SCSS", "JavaScript", "GSAP", "Bootstrap", "Adyen", "Flickity", "Playwright", "Docker"],
+    github: "#",
+    live: "#",
+    gradient: "from-sky-600 via-blue-700 to-indigo-800",
+    featured: false,
+    type: "client",
+    category: "Frontend (.NET)",
+  },
+  {
+    title: "CILT Website",
+    description:
+      "Website for the Chartered Institute of Logistics and Transport on Umbraco CMS. Frontend built with Vue 3, Tailwind CSS, GSAP animations, Chart.js data visualisations, and Font Awesome icons — .NET 9 backend handled by the core team.",
+    tags: ["Vue.js", "Tailwind CSS", "TypeScript", "Umbraco", "Storybook", "GSAP", "Chart.js", "Font Awesome"],
+    github: "#",
+    live: "#",
+    gradient: "from-orange-600 via-red-700 to-rose-800",
+    featured: false,
+    type: "client",
+    category: "Frontend (.NET)",
+  },
+  {
+    title: "Human Capital Group",
+    description:
+      "Corporate website powered by Kentico Kontent headless CMS with a Nucleum frontend. Delivered all frontend build — content API integration by the .NET backend team.",
+    tags: ["Kentico", "Nucleum", "Sass/SCSS", "JavaScript"],
+    github: "#",
+    live: "#",
+    gradient: "from-pink-500 via-rose-600 to-red-700",
+    featured: false,
+    type: "client",
+    category: "Frontend (.NET)",
+  },
+  {
+    title: "Equity Website",
+    description:
+      "Corporate website for the Equity performing arts union on .NET Core MVC. Delivered frontend templates and styles; backend and CMS integration by the .NET team.",
+    tags: ["Sass/SCSS", "JavaScript", "Docker"],
+    github: "#",
+    live: "#",
+    gradient: "from-red-600 via-rose-700 to-pink-800",
+    featured: false,
+    type: "client",
+    category: "Frontend (.NET)",
+  },
+  {
+    title: "Uplifts Website v2",
+    description:
+      "Corporate website on .NET Core MVC deployed via Kubernetes and Azure Pipelines. Frontend with GSAP animations, Swiper carousels, Stripe & PayPal payments, and Bootstrap layout.",
+    tags: ["Vite", "Sass/SCSS", "GSAP", "Swiper", "Stripe", "PayPal", "Bootstrap", "Kubernetes"],
+    github: "#",
+    live: "#",
+    gradient: "from-fuchsia-500 via-violet-600 to-purple-700",
+    featured: false,
+    type: "client",
+    category: "Frontend (.NET)",
+  },
+  {
+    title: "IFASTAT Website",
+    description:
+      "Informational website on ASP.NET MVC. Frontend with GSAP animations, Chart.js data visualisations, Select2 dropdowns, and Font Awesome icons — delivered ahead of backend integration.",
+    tags: ["Sass/SCSS", "JavaScript", "GSAP", "Chart.js", "Select2", "Font Awesome", "ASP.NET MVC"],
+    github: "#",
+    live: "#",
+    gradient: "from-lime-600 via-green-700 to-teal-800",
+    featured: false,
+    type: "client",
+    category: "Frontend (.NET)",
+  },
+
+  // — Client work: Email Tools —
+  {
+    title: "INEOS Email Signature Generator",
+    description:
+      "Internal tool for generating branded INEOS email signatures. Web interface that outputs copy-pasteable HTML signatures consistent with brand guidelines across all email clients.",
+    tags: ["HTML", "CSS", "JavaScript"],
+    github: "#",
+    live: "#",
+    gradient: "from-zinc-500 via-gray-600 to-slate-700",
+    featured: false,
+    type: "client",
+    category: "Email Tools",
+  },
+  {
+    title: "MTM Email Signature Generator",
+    description:
+      "Branded email signature generator for Mattioli Woods internal teams. Produces correctly formatted HTML signatures for Outlook, Apple Mail, and Gmail.",
+    tags: ["HTML", "CSS", "JavaScript"],
+    github: "#",
+    live: "#",
+    gradient: "from-violet-600 via-purple-700 to-indigo-800",
+    featured: false,
+    type: "client",
+    category: "Email Tools",
+  },
+
+  // — Client work: WordPress & PHP (full stack) —
+  {
+    title: "EM-Trak Marine Electronics",
+    description:
+      "Marine electronics e-commerce site for EM-Trak. Timber/Twig templates, WooCommerce product catalogue, Mapbox + Leaflet dealer locator, Gravity Forms, Select2 dropdowns, and Flickity carousels.",
+    tags: ["WordPress", "PHP", "Timber/Twig", "ACF", "WooCommerce", "Mapbox", "Leaflet", "Gravity Forms", "Select2", "Flickity", "jQuery"],
+    github: "#",
+    live: "https://em-trak.com",
+    gradient: "from-teal-600 via-cyan-700 to-sky-800",
+    featured: true,
+    type: "client",
+    category: "WordPress & PHP",
+  },
+  {
+    title: "MTM Neptune Framework",
+    description:
+      "Internal WordPress theme framework built for Mattioli Woods' suite of sites. Timber/Twig templating and custom REST API integrations.",
+    tags: ["WordPress", "PHP", "Timber/Twig", "jQuery"],
+    github: "#",
+    live: "#",
+    gradient: "from-indigo-600 via-violet-700 to-purple-800",
+    featured: true,
+    type: "client",
+    category: "WordPress & PHP",
+  },
+  {
+    title: "Champlor",
+    description:
+      "E-commerce website for Champlor (Valtris rebrand). Timber/Twig templating, WooCommerce, ACF, Google Maps, and Gravity Forms.",
+    tags: ["WordPress", "PHP", "Timber/Twig", "ACF", "WooCommerce", "Google Maps", "Gravity Forms", "jQuery"],
+    github: "#",
+    live: "#",
+    gradient: "from-violet-600 via-purple-700 to-fuchsia-800",
+    featured: false,
+    type: "client",
+    category: "WordPress & PHP",
+  },
+  {
+    title: "Mattioli Woods",
+    description:
+      "Wealth management and employee benefits platform for Mattioli Woods. ACF, GSAP animations, Swiper carousels, and Leaflet maps.",
+    tags: ["WordPress", "PHP", "ACF", "GSAP", "Swiper", "Leaflet", "jQuery"],
+    github: "#",
+    live: "#",
+    gradient: "from-emerald-600 via-green-700 to-teal-800",
+    featured: false,
+    type: "client",
+    category: "WordPress & PHP",
+  },
+  {
+    title: "RAD Propulsion",
+    description:
+      "Marine electric motor company website for RAD Propulsion. ACF, GSAP animations, Swiper carousels, Google Maps dealer locator, and Select2 dropdowns.",
+    tags: ["WordPress", "PHP", "ACF", "GSAP", "Swiper", "Google Maps", "Select2", "jQuery"],
+    github: "#",
+    live: "#",
+    gradient: "from-slate-600 via-gray-700 to-zinc-800",
+    featured: false,
+    type: "client",
+    category: "WordPress & PHP",
+  },
+  {
+    title: "Lausanne Sport FC",
+    description:
+      "Official website for Lausanne Sport football club. ACF, Google Maps integration, and custom post types.",
+    tags: ["WordPress", "PHP", "ACF", "Google Maps", "jQuery"],
+    github: "#",
+    live: "#",
+    gradient: "from-red-600 via-rose-700 to-pink-800",
+    featured: false,
+    type: "client",
+    category: "WordPress & PHP",
+  },
+  {
+    title: "Applied Acoustics",
+    description:
+      "Scientific acoustics company website. ACF, GSAP animations, Swiper carousels, and Lottie animations.",
+    tags: ["WordPress", "PHP", "ACF", "GSAP", "Swiper", "Lottie", "jQuery"],
+    github: "#",
+    live: "#",
+    gradient: "from-orange-600 via-red-700 to-rose-800",
+    featured: false,
+    type: "client",
+    category: "WordPress & PHP",
+  },
+  {
+    title: "Inchcape Shipping Services",
+    description:
+      "Global shipping services website built on WordPress with a custom theme. ACF custom fields, Google Maps integration, and Flickity carousels.",
+    tags: ["WordPress", "PHP", "ACF", "Google Maps", "Flickity", "jQuery"],
+    github: "#",
+    live: "#",
+    gradient: "from-blue-600 via-sky-700 to-cyan-800",
+    featured: false,
+    type: "client",
+    category: "WordPress & PHP",
+  },
+  {
+    title: "Ocean Infinity",
+    description:
+      "Corporate website for deep-sea technology company Ocean Infinity. Timber/Twig templating, ACF, Gravity Forms, and Flickity carousels.",
+    tags: ["WordPress", "PHP", "Timber/Twig", "ACF", "Gravity Forms", "Flickity", "jQuery"],
+    github: "#",
+    live: "#",
+    gradient: "from-cyan-600 via-teal-700 to-emerald-800",
+    featured: false,
+    type: "client",
+    category: "WordPress & PHP",
+  },
+  {
+    title: "Eric Robinson",
+    description:
+      "WordPress site for Eric Robinson property consultants. Timber/Twig templates, ACF, Gravity Forms, Google Maps, Flickity carousels, and Cookie Consent.",
+    tags: ["WordPress", "PHP", "Timber/Twig", "ACF", "Gravity Forms", "Google Maps", "Flickity", "Cookie Consent", "jQuery"],
+    github: "#",
+    live: "#",
+    gradient: "from-amber-600 via-orange-700 to-red-800",
+    featured: false,
+    type: "client",
+    category: "WordPress & PHP",
+  },
+  {
+    title: "Shelbourne Estates",
+    description:
+      "WordPress property website for Shelbourne Estates. Timber/Twig templating and custom REST API endpoints.",
+    tags: ["WordPress", "PHP", "Timber/Twig", "jQuery"],
+    github: "#",
+    live: "#",
+    gradient: "from-rose-500 via-pink-600 to-fuchsia-700",
+    featured: false,
+    type: "client",
+    category: "WordPress & PHP",
+  },
+  {
+    title: "Argent Energy",
+    description:
+      "Corporate website for Argent Energy, a sustainable fuel producer. ACF, Gravity Forms, and custom post types.",
+    tags: ["WordPress", "PHP", "ACF", "Gravity Forms", "jQuery"],
+    github: "#",
+    live: "#",
+    gradient: "from-green-600 via-lime-700 to-yellow-700",
+    featured: false,
+    type: "client",
+    category: "WordPress & PHP",
+  },
+  {
+    title: "Argent Fuels",
+    description:
+      "Fuel distribution website for Argent Fuels built on WordPress. ACF, Gravity Forms, and custom post types.",
+    tags: ["WordPress", "PHP", "ACF", "Gravity Forms", "jQuery"],
+    github: "#",
+    live: "#",
+    gradient: "from-yellow-600 via-amber-700 to-orange-800",
+    featured: false,
+    type: "client",
+    category: "WordPress & PHP",
+  },
+  {
+    title: "Promarine Finance",
+    description:
+      "Marine finance brokerage website. ACF and Flickity carousels.",
+    tags: ["WordPress", "PHP", "ACF", "Flickity", "jQuery"],
+    github: "#",
+    live: "#",
+    gradient: "from-sky-600 via-blue-700 to-indigo-800",
+    featured: false,
+    type: "client",
+    category: "WordPress & PHP",
   },
 ];
 
@@ -203,5 +653,5 @@ export const stats = [
   { label: "Years of Experience", value: "4+" },
   { label: "Projects Shipped", value: "30+" },
   { label: "Happy Clients", value: "20+" },
-  { label: "GitHub Stars", value: "500+" },
+  { label: "Countries Reached", value: "10+" },
 ];
