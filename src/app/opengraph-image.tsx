@@ -115,7 +115,7 @@ export default function OGImage() {
 
         {/* Tech pills */}
         <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
-          {["React", "Next.js", "TypeScript", "Node.js", "WordPress", "Vue.js"].map((tech) => (
+          {["React", "Next.js", "TypeScript", "Node.js", "Python", "WordPress", "Vue.js", "SQL"].map((tech) => (
             <div
               key={tech}
               style={{

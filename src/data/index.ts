@@ -36,6 +36,7 @@ export const skills = [
   { name: "Express.js", icon: "⚡", category: "Backend" },
   { name: "Socket.IO", icon: "🔌", category: "Realtime" },
   { name: "Python", icon: "🐍", category: "Language" },
+  { name: "SQL", icon: "🗄️", category: "Database" },
   { name: "PostgreSQL", icon: "🐘", category: "Database" },
   { name: "MongoDB", icon: "🍃", category: "Database" },
   { name: "Docker", icon: "🐳", category: "DevOps" },
