@@ -63,6 +63,9 @@ export const skills = [
   { name: "Chart.js", icon: "📊", category: "Data Viz" },
   { name: "Apollo Client", icon: "🚀", category: "API" },
   { name: "jQuery", icon: "💲", category: "Frontend" },
+  { name: "Vercel", icon: "▲", category: "DevOps" },
+  { name: "Netlify", icon: "🌐", category: "DevOps" },
+  { name: "Resend", icon: "📧", category: "API" },
 ];
 
 export const projects = [

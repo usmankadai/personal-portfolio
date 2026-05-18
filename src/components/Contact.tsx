@@ -44,14 +44,27 @@ export default function Contact() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
+  const [error, setError] = useState("");
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    // Simulate a network call — wire up to your preferred service
-    await new Promise((r) => setTimeout(r, 1200));
+    setError("");
+
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
+
     setLoading(false);
-    setSent(true);
-    setForm({ name: "", email: "", message: "" });
+
+    if (res.ok) {
+      setSent(true);
+      setForm({ name: "", email: "", message: "" });
+    } else {
+      setError("Something went wrong. Please try emailing me directly.");
+    }
   };
 
   return (
@@ -283,6 +296,9 @@ export default function Contact() {
                     </>
                   )}
                 </button>
+                {error && (
+                  <p className="text-red-400 text-xs text-center">{error}</p>
+                )}
               </form>
             )}
           </motion.div>
