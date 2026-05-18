@@ -22,6 +22,8 @@ export const metadata: Metadata = {
     title: "Usman Kadai – Full Stack Developer",
     description: "Full Stack Developer based in London. Building beautiful, scalable web experiences.",
     type: "website",
+    url: "https://usmankadai.dev",
+    siteName: "Usman Kadai",
   },
   twitter: {
     card: "summary_large_image",
