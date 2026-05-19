@@ -85,17 +85,17 @@ export const projects = [
     featured: true,
     type: "personal",
   },
-  {
-    title: "E-commerce Platform",
-    description:
-      "Full-featured e-commerce store with Stripe payments, inventory management, and a custom CMS for product listings.",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    github: "https://github.com/usmankadai",
-    live: "#",
-    gradient: "from-cyan-500 via-blue-600 to-indigo-700",
-    featured: true,
-    type: "personal",
-  },
+  // {
+  //   title: "E-commerce Platform",
+  //   description:
+  //     "Full-featured e-commerce store with Stripe payments, inventory management, and a custom CMS for product listings.",
+  //   tags: ["React", "Node.js", "MongoDB", "Stripe"],
+  //   github: "https://github.com/usmankadai",
+  //   live: "#",
+  //   gradient: "from-cyan-500 via-blue-600 to-indigo-700",
+  //   featured: true,
+  //   type: "personal",
+  // },
   {
     title: "Deep Neural Network for Automatic Detection of Humans and Livestock In Aerial Images",
     description:
@@ -108,16 +108,28 @@ export const projects = [
     featured: true,
     type: "personal",
   },
+  // {
+  //   title: "DevOps Pipeline Tool",
+  //   description:
+  //     "CLI + web UI for managing CI/CD pipelines, with GitHub Actions integration and live deployment logs.",
+  //   tags: ["Python", "Docker", "AWS", "React"],
+  //   github: "https://github.com/usmankadai",
+  //   live: "#",
+  //   gradient: "from-orange-500 via-red-600 to-pink-700",
+  //   featured: false,
+  //   type: "personal",
+  // },
   {
-    title: "DevOps Pipeline Tool",
+    title: "Study Buddy",
     description:
-      "CLI + web UI for managing CI/CD pipelines, with GitHub Actions integration and live deployment logs.",
-    tags: ["Python", "Docker", "AWS", "React"],
-    github: "https://github.com/usmankadai",
+      "Full-stack student matchmaking platform for University of Portsmouth. Students sign in via Google OAuth, complete a profile with course, availability, and topic confidence levels, then get matched using a Jaccard similarity algorithm. Features session booking, an interactive dashboard, post-session ratings, and automated email notifications.",
+    tags: ["Next.js", "React", "TypeScript", "PostgreSQL", "Google OAuth", "Tailwind CSS", "Azure DevOps"],
+    github: "https://github.com/usmankadai/Study-Buddy",
     live: "#",
-    gradient: "from-orange-500 via-red-600 to-pink-700",
+    gradient: "from-blue-500 via-indigo-600 to-violet-700",
     featured: false,
     type: "personal",
+    image: "/projects/study-buddy.png",
   },
   {
     title: "UK House Prices: Find Your Area",
