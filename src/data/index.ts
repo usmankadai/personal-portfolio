@@ -120,6 +120,17 @@ export const projects = [
   //   type: "personal",
   // },
   {
+    title: "LEGO Shop",
+    description:
+      "Full-stack e-commerce store for LEGO bricks and kits. Features a filterable catalogue, individual product pages, shopping cart and wishlist (localStorage), simulated checkout that decrements stock, and an admin panel for uploading and deleting products — gated behind Auth0 authentication. Deployed serverlessly on Vercel with Turso (hosted SQLite) for data and Cloudinary CDN for images.",
+    tags: ["Node.js", "Express", "SQLite", "Auth0", "Cloudinary", "Vercel"],
+    github: "https://github.com/usmankadai/LegoShop",
+    live: "https://lego-shop.usmankadai.dev",
+    gradient: "from-yellow-500 via-orange-500 to-red-600",
+    featured: false,
+    type: "personal",
+  },
+  {
     title: "Study Buddy",
     description:
       "Full-stack student matchmaking platform for University of Portsmouth. Students sign in via Google OAuth, complete a profile with course, availability, and topic confidence levels, then get matched using a Jaccard similarity algorithm. Features session booking, an interactive dashboard, post-session ratings, and automated email notifications.",
