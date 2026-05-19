@@ -9,6 +9,23 @@ import { projects } from "@/data";
 
 type Project = (typeof projects)[0];
 
+function ProjectMedia({ src, alt, priority }: { src: string; alt: string; priority?: boolean }) {
+  const isVideo = src.endsWith(".mp4") || src.endsWith(".webm");
+  if (isVideo) {
+    return (
+      <video
+        src={src}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+    );
+  }
+  return <Image src={src} alt={alt} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" unoptimized={src.endsWith(".gif")} priority={priority} />;
+}
+
 function AnimatedPlaceholder({ gradient }: { gradient: string }) {
   return (
     <div
@@ -69,7 +86,7 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
       >
         <div className="relative h-52 shrink-0">
           {project.image ? (
-            <Image src={project.image} alt={project.title} fill className="object-cover" unoptimized />
+            <ProjectMedia src={project.image} alt={project.title} />
           ) : (
             <AnimatedPlaceholder gradient={project.gradient} />
           )}
@@ -154,7 +171,7 @@ function ProjectCard({
     >
       <div className="relative h-52 overflow-hidden">
         {project.image ? (
-          <Image src={project.image} alt={project.title} fill className="object-cover" unoptimized priority={index < 3} />
+          <ProjectMedia src={project.image} alt={project.title} priority={index < 3} />
         ) : (
           <AnimatedPlaceholder gradient={project.gradient} />
         )}
