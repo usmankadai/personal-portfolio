@@ -154,7 +154,7 @@ function ProjectCard({
     >
       <div className="relative h-52 overflow-hidden">
         {project.image ? (
-          <Image src={project.image} alt={project.title} fill className="object-cover" unoptimized />
+          <Image src={project.image} alt={project.title} fill className="object-cover" unoptimized priority={index < 3} />
         ) : (
           <AnimatedPlaceholder gradient={project.gradient} />
         )}

@@ -111,6 +111,14 @@ function TimelineCard({ item }: { item: CareerItem }) {
         <span className="text-gray-500">{item.location}</span>
       </div>
 
+      {"highlight" in item && item.highlight && (
+        <div className="flex items-start gap-2 mt-2 mb-2 px-3 py-2 rounded-lg bg-amber-500/5 border border-amber-500/20">
+          <span className="text-amber-400 mt-0.5 shrink-0">🏆</span>
+          <p className="text-amber-300 text-xs font-semibold leading-relaxed">
+            {item.highlight}
+          </p>
+        </div>
+      )}
       <p className="text-gray-500 text-sm leading-relaxed mt-2 mb-3">
         {item.description}
       </p>
