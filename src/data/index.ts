@@ -120,17 +120,6 @@ export const projects = [
   //   type: "personal",
   // },
   {
-    title: "LEGO Shop",
-    description:
-      "Full-stack LEGO e-commerce store built with vanilla JS, Node.js, and Express. Features full-text search across bricks and kits, filtering by colour, size, and price range, server-persisted cart and wishlist synced per Auth0 user, simulated checkout with stock decrement, and an admin panel with inline product editing and Cloudinary image uploads. Deployed serverlessly on Vercel with Turso (hosted SQLite).",
-    tags: ["Node.js", "Express", "SQLite", "Auth0", "Cloudinary", "Vercel", "JavaScript"],
-    github: "https://github.com/usmankadai/LegoShop",
-    live: "https://lego-shop.usmankadai.dev",
-    gradient: "from-yellow-500 via-orange-500 to-red-600",
-    featured: false,
-    type: "personal",
-  },
-  {
     title: "Study Buddy",
     description:
       "Full-stack student matchmaking platform for University of Portsmouth. Students sign in via Google OAuth, complete a profile with course, availability, and topic confidence levels, then get matched using a Jaccard similarity algorithm. Features session booking, an interactive dashboard, post-session ratings, and automated email notifications.",
@@ -141,6 +130,18 @@ export const projects = [
     featured: false,
     type: "personal",
     image: "/projects/study-buddy.png",
+  },
+  {
+    title: "LEGO Shop",
+    description:
+      "Full-stack LEGO e-commerce store built with vanilla JS, Node.js, and Express. Features full-text search across bricks and kits, filtering by colour, size, and price range, server-persisted cart and wishlist synced per Auth0 user, simulated checkout with stock decrement, and an admin panel with inline product editing and Cloudinary image uploads. Deployed serverlessly on Vercel with Turso (hosted SQLite).",
+    tags: ["Node.js", "Express", "SQLite", "Auth0", "Cloudinary", "Vercel", "JavaScript"],
+    github: "https://github.com/usmankadai/LegoShop",
+    live: "https://lego-shop.usmankadai.dev",
+    gradient: "from-yellow-500 via-orange-500 to-red-600",
+    featured: false,
+    type: "personal",
+    image: "/projects/image.png",
   },
   {
     title: "UK House Prices: Find Your Area",
