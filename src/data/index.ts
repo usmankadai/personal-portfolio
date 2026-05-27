@@ -76,7 +76,7 @@ export const projects = [
   {
     title: "Scrabble",
     description:
-      "Browser-based Scrabble game with single-player and real-time multiplayer via Socket.IO. Features drag-and-drop tiles, correct bonus-square scoring, dictionary API word validation, and turn enforcement across clients.",
+      "Browser-based Scrabble game with single-player and real-time multiplayer via Socket.IO. Features drag-and-drop tiles (mouse and touch), authentic bonus-square scoring with word breakdowns, dictionary API word validation, lobby-based rooms with host/join, turn enforcement across clients, and background music with sound effects.",
     tags: ["JavaScript", "Node.js", "Socket.IO", "Express"],
     github: "https://github.com/usmankadai/scrabble",
     live: "https://scrabble.usmankadai.dev/",
@@ -134,7 +134,7 @@ export const projects = [
   {
     title: "LEGO Shop",
     description:
-      "Full-stack LEGO e-commerce store built with vanilla JS, Node.js, and Express. Features full-text search across bricks and kits, filtering by colour, size, and price range, server-persisted cart and wishlist synced per Auth0 user, simulated checkout with stock decrement, and an admin panel with inline product editing and Cloudinary image uploads. Deployed serverlessly on Vercel with Turso (hosted SQLite).",
+      "Full-stack LEGO e-commerce store built with vanilla JS, Node.js, and Express. Features Auth0 authentication, full-text search across bricks and kits, filtering by colour, size, and price, guest cart via localStorage with server-sync per logged-in user, simulated checkout with stock decrement, and a role-based admin panel with inline product editing and Cloudinary image uploads. Deployed serverlessly on Vercel with Turso (hosted SQLite).",
     tags: ["Node.js", "Express", "SQLite", "Auth0", "Cloudinary", "Vercel", "JavaScript"],
     github: "https://github.com/usmankadai/LegoShop",
     live: "https://lego-shop.usmankadai.dev",
@@ -146,8 +146,8 @@ export const projects = [
   {
     title: "UK House Prices: Find Your Area",
     description:
-      "Interactive choropleth map and price-history chart showing UK house price trends since 2015, powered by the HM Land Registry API. Enter a postcode to jump straight to your region, with editorial annotations marking Brexit, COVID, and the 2022 mini-budget.",
-    tags: ["React", "TypeScript", "D3.js", "Vite"],
+      "Interactive choropleth map and price-history chart showing UK house price trends since 2015, powered by HM Land Registry data. Features scroll-driven storytelling, postcode lookup, an AI voice narrator, and editorial annotations marking Brexit, COVID, and the 2022 mini-budget.",
+    tags: ["React", "TypeScript", "D3.js", "Vite", "VAPI"],
     github: "https://github.com/usmankadai/uk-house-prices-by-region",
     live: "https://uk-house-prices.usmankadai.dev/",
     image: "/projects/uk-house-price.mp4",
