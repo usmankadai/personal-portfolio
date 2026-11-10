@@ -114,13 +114,14 @@ export const projects = [
   {
     title: "Switchboard",
     description:
-      "Accessible electricity switching journey: postcode to region, usage estimate, a comparison of real tariffs priced from the public Octopus Energy API, and a multi-step signup. A GraphQL backend-for-frontend (Apollo Server in a Next.js route handler) turns six or more REST calls into one query, with Next.js Cache Components, CDN caching and graceful handling of upstream failures. Variable tariffs like Agile are estimated from 30 days of half-hourly prices weighted by a typical usage profile. Includes a tariff layout A/B test assigned before rendering, a privacy-safe funnel dashboard, Sentry, Lighthouse CI budgets and a k6 load test, all built to WCAG 2.2 AA and tested with Vitest and Playwright with axe.",
+      "Accessible electricity switching journey: postcode to region, usage estimate, a comparison of real tariffs priced from the public Octopus Energy API, and a multi-step signup. A GraphQL backend-for-frontend (Apollo Server in a Next.js route handler) turns six or more REST calls into one query, with Next.js Cache Components, CDN caching and graceful handling of upstream failures. Variable tariffs like Agile are estimated from 30 days of half-hourly prices weighted by a typical usage profile. Includes a tariff layout A/B test assigned before rendering, a privacy-safe funnel dashboard that counts distinct sessions in Upstash Redis HyperLogLogs without storing any ids, Sentry, Lighthouse CI budgets and a k6 load test, all built to WCAG 2.2 AA and tested with Vitest and Playwright with axe.",
     tags: [
       "Next.js",
       "React",
       "TypeScript",
       "GraphQL",
       "Apollo",
+      "Upstash Redis",
       "Vitest",
       "Playwright",
       "k6",
