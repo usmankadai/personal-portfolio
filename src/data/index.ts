@@ -74,6 +74,60 @@ export const skills = [
 export const projects = [
   // — Personal projects —
   {
+    title: "Parity",
+    description:
+      "Benefits comparison workspace for a Reward Director: a fictional company's package laid over the legal minimums in the UK, Ireland, Germany and the Netherlands, with a summary of every gap, live what-if editing, and per-company branding from config. 28 statutory figures researched from official government sources, each linked and dated. An AI assistant (Anthropic Claude, behind a serverless proxy) streams answers that cite only the data on screen, with stop, cancel and retry handled by Redux-Saga, and a scripted fallback if the AI is unavailable. Built to WCAG 2.2 AA with 170 unit and integration tests, 22 Playwright tests with axe, a strict Content Security Policy and 8 architecture decision records.",
+    tags: [
+      "React",
+      "TypeScript",
+      "Redux-Saga",
+      "Redux Toolkit",
+      "RsBuild",
+      "MSW",
+      "Anthropic API",
+      "Playwright",
+    ],
+    github: "https://github.com/usmankadai/Parity",
+    live: "https://parity.usmankadai.dev/",
+    image: "/projects/parity.mp4",
+    gradient: "from-blue-600 via-indigo-600 to-blue-800",
+    featured: true,
+    type: "personal",
+  },
+  {
+    title: "Switchboard",
+    description:
+      "Accessible electricity switching journey: postcode to region, usage estimate, a comparison of real tariffs priced from the public Octopus Energy API, and a multi-step signup. A GraphQL backend-for-frontend (Apollo Server in a Next.js route handler) turns six or more REST calls into one query, with Next.js Cache Components, CDN caching and graceful handling of upstream failures. Variable tariffs like Agile are estimated from 30 days of half-hourly prices weighted by a typical usage profile. Includes a tariff layout A/B test assigned before rendering, a privacy-safe funnel dashboard, Sentry, Lighthouse CI budgets and a k6 load test, all built to WCAG 2.2 AA and tested with Vitest and Playwright with axe.",
+    tags: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "GraphQL",
+      "Apollo",
+      "Vitest",
+      "Playwright",
+      "k6",
+    ],
+    github: "https://github.com/usmankadai/Switchboard",
+    live: "https://switchboard.usmankadai.dev/",
+    image: "/projects/switchboard.mp4",
+    gradient: "from-emerald-700 via-teal-700 to-green-800",
+    featured: true,
+    type: "personal",
+  },
+  {
+    title: "Pulse",
+    description:
+      "Real-time crypto market dashboard streaming every Binance symbol over public WebSockets straight into the browser, with no backend. Updates arrive at wire speed but reach React at most once per animation frame, with ring buffers for fixed memory, a virtualised grid of 2,000+ symbols with canvas sparklines, and a hand-built canvas candlestick chart with zoom, pan and touch gestures. Includes a live order book and trade tape, a portfolio valued against streaming prices, automatic reconnection with backoff and staleness detection, and an on-screen performance HUD showing updates per second, renders, FPS and memory.",
+    tags: ["Next.js", "React", "TypeScript", "WebSockets", "Canvas", "styled-components", "Vitest"],
+    github: "https://github.com/usmankadai/Pulse",
+    live: "https://pulse.usmankadai.dev/",
+    image: "/projects/pulse.mp4",
+    gradient: "from-gray-800 via-emerald-700 to-gray-900",
+    featured: true,
+    type: "personal",
+  },
+  {
     title: "Scrabble",
     description:
       "Browser-based Scrabble game with single-player and real-time multiplayer via Socket.IO. Features drag-and-drop tiles (mouse and touch), authentic bonus-square scoring with word breakdowns, dictionary API word validation, lobby-based rooms with host/join, turn enforcement across clients, and background music with sound effects.",
