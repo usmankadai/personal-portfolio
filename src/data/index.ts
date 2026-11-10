@@ -192,7 +192,7 @@ export const projects = [
     gradient: "from-blue-500 via-indigo-600 to-violet-700",
     featured: false,
     type: "personal",
-    image: "/projects/study-buddy.png",
+    image: "/projects/study-buddy.mp4",
   },
   {
     title: "LEGO Shop",
