@@ -134,6 +134,18 @@ export const projects = [
     type: "personal",
   },
   {
+    title: "Pulse",
+    description:
+      "Real-time crypto market dashboard streaming every Binance symbol over public WebSockets straight into the browser, with no backend. Updates arrive at wire speed but reach React at most once per animation frame, with ring buffers for fixed memory, a virtualised grid of 2,000+ symbols with canvas sparklines, and a hand-built canvas candlestick chart with zoom, pan and touch gestures. Includes a live order book and trade tape, a portfolio valued against streaming prices, automatic reconnection with backoff and staleness detection, and an on-screen performance HUD showing updates per second, renders, FPS and memory.",
+    tags: ["Next.js", "React", "TypeScript", "WebSockets", "Canvas", "styled-components", "Vitest"],
+    github: "https://github.com/usmankadai/Pulse",
+    live: "https://pulse.usmankadai.dev/",
+    image: "/projects/pulse.mp4",
+    gradient: "from-gray-800 via-emerald-700 to-gray-900",
+    featured: true,
+    type: "personal",
+  },
+  {
     title: "Study Buddy",
     description:
       "Full-stack student matchmaking platform for University of Portsmouth. Students sign in via Google OAuth, complete a profile with course, availability, and topic confidence levels, then get matched using a Jaccard similarity algorithm. Features session booking, an interactive dashboard, post-session ratings, and automated email notifications.",
@@ -163,18 +175,6 @@ export const projects = [
     image: "/projects/uk-house-price.mp4",
     gradient: "from-violet-600 via-purple-700 to-indigo-800",
     featured: false,
-    type: "personal",
-  },
-  {
-    title: "Pulse",
-    description:
-      "Real-time crypto market dashboard streaming every Binance symbol over public WebSockets straight into the browser, with no backend. Updates arrive at wire speed but reach React at most once per animation frame, with ring buffers for fixed memory, a virtualised grid of 2,000+ symbols with canvas sparklines, and a hand-built canvas candlestick chart with zoom, pan and touch gestures. Includes a live order book and trade tape, a portfolio valued against streaming prices, automatic reconnection with backoff and staleness detection, and an on-screen performance HUD showing updates per second, renders, FPS and memory.",
-    tags: ["Next.js", "React", "TypeScript", "WebSockets", "Canvas", "styled-components", "Vitest"],
-    github: "https://github.com/usmankadai/Pulse",
-    live: "https://pulse.usmankadai.dev/",
-    image: "/projects/pulse.mp4",
-    gradient: "from-gray-800 via-emerald-700 to-gray-900",
-    featured: true,
     type: "personal",
   },
   {
