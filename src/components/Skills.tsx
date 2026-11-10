@@ -4,8 +4,10 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { skills } from "@/data";
 
-const row1 = skills.slice(0, 8);
-const row2 = skills.slice(8, 16);
+// One carousel row per group in the data file, so every skill is shown.
+const rows = Array.from(new Set(skills.map((s) => s.row))).map((row) =>
+  skills.filter((s) => s.row === row),
+);
 
 function SkillBadge({ name, icon, category }: { name: string; icon: string; category: string }) {
   return (
@@ -34,10 +36,11 @@ function InfiniteRow({
     >
       <div
         className={`flex ${direction === "left" ? "animate-scroll-left" : "animate-scroll-right"}`}
-        style={{ width: "max-content" }}
+        // Longer rows take longer to loop, so every row moves at the same pace.
+        style={{ width: "max-content", animationDuration: `${items.length * 3.5}s` }}
       >
         {doubled.map((skill, i) => (
-          <SkillBadge key={`${skill.name}-${i}`} {...skill} />
+          <SkillBadge key={`${skill.name}-${i}`} name={skill.name} icon={skill.icon} category={skill.category} />
         ))}
       </div>
     </div>
@@ -57,6 +60,13 @@ const categoryColors: Record<string, string> = {
   State: "text-violet-400 bg-violet-400/10 border-violet-400/20",
   ORM: "text-teal-400 bg-teal-400/10 border-teal-400/20",
   Cache: "text-red-400 bg-red-400/10 border-red-400/20",
+  Testing: "text-lime-400 bg-lime-400/10 border-lime-400/20",
+  Accessibility: "text-yellow-400 bg-yellow-400/10 border-yellow-400/20",
+  Realtime: "text-green-400 bg-green-400/10 border-green-400/20",
+  AI: "text-fuchsia-400 bg-fuchsia-400/10 border-fuchsia-400/20",
+  "Data Viz": "text-amber-400 bg-amber-400/10 border-amber-400/20",
+  Performance: "text-orange-300 bg-orange-300/10 border-orange-300/20",
+  Monitoring: "text-purple-300 bg-purple-300/10 border-purple-300/20",
 };
 
 export default function Skills() {
@@ -116,8 +126,9 @@ export default function Skills() {
         transition={{ duration: 0.8, delay: 0.3 }}
         className="flex flex-col gap-4"
       >
-        <InfiniteRow items={row1} direction="left" />
-        <InfiniteRow items={row2} direction="right" />
+        {rows.map((items, i) => (
+          <InfiniteRow key={i} items={items} direction={i % 2 === 0 ? "left" : "right"} />
+        ))}
       </motion.div>
     </section>
   );
